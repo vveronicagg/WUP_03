@@ -47,7 +47,22 @@ In this data, the front mean is 1.8, for the middle it is 3.2. Lastly the back i
 
 
 ## Inferential Tests
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 
+Looking at the anova test the pr results were 0.000116 stating that their all the same amount meaning that all the rows are the same. The back and the front row are different from each other. But the middle row has a larger consumption of alcohol. Compared to the back row, and the front row has a smaller consumption. Meaning, that all the rows are completely different from each other. 
+
+
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+
+This shows us that the front and the back are different as well as the middle and the back. But the front and the middle are statistically not different 
 ## Conclusions
+
 
 
