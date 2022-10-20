@@ -43,6 +43,7 @@ favstats(alcohol~Seat,data=davisdata)
 
 ## Numerical Summarys 
 
+In this data, the front mean is 1.8, for the middle it is 3.2. Lastly the back is 9.6. Stating that the back seats have a bigger mean than the others. That the back seats consume much more. 
 
 
 ## Inferential Tests
