@@ -62,7 +62,9 @@ plot(TukeyHSD(model1),las=2)
 ```
 
 This shows us that the front and the back are different as well as the middle and the back. But the front and the middle are statistically not different 
+
 ## Conclusions
 
+The test shows us that the front and the back are different, and the front and the back row are also different. But in the front and middle row their the same in consumption of alcohol. 
 
 
