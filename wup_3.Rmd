@@ -17,6 +17,11 @@ davisdata <- read.csv(file="UCDavis.csv")
 ## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
 ## you choose to sit in??
 
+```{r eval=FALSE}
+davisdata <- davisdata %>%
+mutate(across(where(is.character), as.factor))
+```
+
 ## Now with ggplot - first select the basic data
 
 ```{r}
@@ -28,7 +33,8 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 basicCN + geom_boxplot()
 ```
   
-  
+Looking at the box plot, compared to the people that sit in the front consume less than the people who sit in the back who consume more alcohol. The median is at zero, and the median for those who sit in the middle is close to one or two. Looking at these calculations you can see that the people who sit in the back consume more. 
+
 ### get fancy  
 
 ```{r}
